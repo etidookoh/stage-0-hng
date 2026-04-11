@@ -6,7 +6,7 @@ A robust NestJS REST API that intelligently predicts the gender associated with 
 ## Live Demo
 
 ```
-https://hng-stage-0-ydsm.vercel.app/api/classify/?name=favour
+https://https://vercel.com/etidos-projects/stage-0-hng
 ```
 
 ---
@@ -66,9 +66,9 @@ Predicts the gender of a given first name.
   "status": "success",
   "data": {
     "name": "etido",
-    "gender": "male",
+    "gender": "female",
     "probability": 0.97,
-    "sample_size": 1234,
+    "sample_size": 964,
     "is_confident": true,
     "processed_at": "2026-04-11T13:24:03.000Z"
   }
