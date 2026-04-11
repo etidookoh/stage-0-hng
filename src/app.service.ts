@@ -5,7 +5,7 @@ import { NameDto } from './classify.dto';
 export class AppService {
   async getHello(name: NameDto) {
     if (!name.name) throw new BadRequestException('Please provide name');
-    const url = `https://api.generalize.io/?name=${name.name}`
+    const url = `https://api.genderize.io/?name=${name.name}`
     try {
       const response = await fetch(url)
       if (!response.ok) throw new BadRequestException('The external service is currently unreachable');

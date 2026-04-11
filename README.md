@@ -66,7 +66,7 @@ Predicts the gender of a given first name.
   "status": "success",
   "data": {
     "name": "etido",
-    "gender": "female",
+    "gender": "male",
     "probability": 0.97,
     "sample_size": 964,
     "is_confident": true,
