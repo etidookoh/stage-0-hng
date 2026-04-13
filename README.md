@@ -6,7 +6,7 @@ A robust NestJS REST API that intelligently predicts the gender associated with 
 ## Live Demo
 
 ```
-https://https://vercel.com/etidos-projects/stage-0-hng
+https://stage-0-hng-production.up.railway.app/api/classify/?name=etido
 ```
 
 ---
