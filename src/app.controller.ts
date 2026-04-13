@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { BadRequestException, Controller, Get, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { NameDto } from './classify.dto';
 
@@ -6,8 +6,15 @@ import { NameDto } from './classify.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/classify')
-  getHello(@Query() name: NameDto){
-    return this.appService.getHello(name);
+  @Get('classify')
+async classify(@Query('name') name: string) {
+  if (!name || name.trim() === '') {
+    throw new BadRequestException({
+      status: 'error',
+      message: 'Name is required',
+    });
   }
+
+  return this.appService.classifyName(name);
+}
 }
