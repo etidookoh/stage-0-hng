@@ -1,6 +1,7 @@
-import { IsNotEmpty, Matches } from 'class-validator';
+import { IsNotEmpty, IsString, Matches } from 'class-validator';
 
 export class NameDto {
+    @IsString()
     @IsNotEmpty()
     @Matches(/^[a-zA-Z]+$/,{
         message: `name must be string`
